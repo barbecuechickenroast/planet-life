@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="./Stylesheet.css">
 
-	<title>planet life</title>
+	<title>Planet Life</title>
 
 
           <style type="text/css">
@@ -425,7 +425,12 @@
   <script src="./starmap.js"></script>
   <script src="./friendHouse.js"></script>
   <script src="./settings.js"></script>
-
+	<script>
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            event.returnValue = '';
+        });
+    </script>
 <script>function fnSendMsg(evt){
           if(typeof window.parent.postMessage == 'function') {
             window.parent.postMessage('keypress-from-game', '*');
